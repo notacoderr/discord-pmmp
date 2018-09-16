@@ -18,6 +18,6 @@ class PlayerJoin implements Listener
 {
     public function event(PlayerJoinEvent $event)
     {
-        Discord::SendServerChat($event->getPlayer()->getName() . "が参加しました。 (" . count(Main::$instance->getServer()->getOnlinePlayers()) . "/" . Main::$instance->getServer()->getMaxPlayers() . ")");
+        Discord::SendServerChat("[ ". count(Main::$instance->getServer()->getOnlinePlayers()) . " / " . Main::$instance->getServer()->getMaxPlayers(). " ] Join: ". $event->getPlayer()->getName(). " (aka) ". $event->getPlayer()->getDisplayName());
     }
 }
