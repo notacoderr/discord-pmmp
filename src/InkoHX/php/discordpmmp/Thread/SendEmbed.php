@@ -13,7 +13,7 @@ use pocketmine\utils\InternetException;
 
 class SendEmbed extends Thread
 {
-    private static $webhook, $title, $field, $value, $color, $username, $avatarurl;
+    private static $webhook, $title, $field, $value, $color, $username, $avatarurl, $ip;
 
     /**
      * SendEmbed constructor.
@@ -24,8 +24,9 @@ class SendEmbed extends Thread
      * @param int $color
      * @param string $username
      * @param string $avatarurl
+     * @param string $ip
      */
-    public function __construct(string $webhook, string $title, string $field, string $value, int $color = 16777215, string $username = "InkoHX", string $avatarurl = "https://avatars1.githubusercontent.com/u/33122816?s=460&v=4")
+    public function __construct(string $webhook, string $title, string $field, string $value, int $color = 16777215, string $username = "InkoHX", string $avatarurl = "https://avatars1.githubusercontent.com/u/33122816?s=460&v=4", string $ip = "playsakura.online")
     {
         static::$webhook = $webhook;
         static::$title = $title;
@@ -54,8 +55,8 @@ class SendEmbed extends Thread
                         ]
                     ],
                     "footer" => [
-                        "text" => "Developed by InkoHX",
-                        "icon_url" => "https://cdn.discordapp.com/avatars/351992405831974915/f1cc00cd87b5b513f0658b3d202277fa.jpg?size=1024"
+                        "text" => static::$ip,
+                        "icon_url" => "https://cdn0.iconfinder.com/data/icons/minecraft-2/64/reapor_minecraft_gaming_video-128.png"
                     ]
                 ]
             ]
