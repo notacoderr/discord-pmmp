@@ -35,6 +35,7 @@ class SendEmbed extends Thread
         static::$color = $color;
         static::$username = $username;
         static::$avatarurl = $avatarurl;
+        static::$ip = $ip;
     }
 
     public function run()
