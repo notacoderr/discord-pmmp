@@ -62,8 +62,27 @@ class DataFile
         return Main::$instance->getConfig()->get('embed');
     }
     
+    /**
+     * @return string
+     */
     public static function getServerIp(): string
     {
         return Main::$instance->getConfig()->get('server-ip');
+    }
+    
+    /**
+     * @return string
+     */
+    public static function getWebhookURL(): string
+    {
+        return Main::$instance->getConfig()->get('webhook');
+    }
+    
+    /**
+     * @return string
+     */
+    public static function getUsername(): string
+    {
+        return Main::$instance->getConfig()->get('username');
     }
 }
