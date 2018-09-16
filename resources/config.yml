@@ -1,6 +1,10 @@
-server-ip: "playsakura.online : 25627"
-webhook: ""
-username: "TheCodeBreaker"
+server-ip: "playsakura.online : 25627" #you actually can type anything here.
+webhook: "" #place your webhooks here / If you get any error. please try adding the Webhook first
+username: "TheCodeBreaker" #this will be the username on Discord
+
+permission: "noperm" 
+#use "noperm" if you want all chat to be send on discord.
+#If you place anything here, make sure you give the player or the group the same permission
 
 onlinemessage:
   send: true
