@@ -21,21 +21,21 @@ class Discord
     public static function SendOnlineEmbed(): void
     {
         if (!Online::getOption()) return;
-        $send = new SendEmbed(Online::getWebhookURL(), Online::getTitle(), Online::getField(), Online::getValue(), Online::getColor(), Online::getUsername(), Online::getAvatarURL(), DataFile::getServerIp());
+        $send = new SendEmbed(DataFile::getWebhookURL(), Online::getTitle(), Online::getField(), Online::getValue(), Online::getColor(), DataFile::getUsername(), Online::getAvatarURL(), DataFile::getServerIp());
         $send->start();
     }
 
     public static function SendOfflineEmbed(): void
     {
         if (!Offline::getOption()) return;
-        $send = new SendEmbed(Offline::getWebhookURL(), Offline::getTitle(), Offline::getField(), Offline::getValue(), Offline::getColor(), Offline::getUsername(), Offline::getAvatarURL(), DataFile::getServerIp());
+        $send = new SendEmbed(DataFile::getWebhookURL(), Offline::getTitle(), Offline::getField(), Offline::getValue(), Offline::getColor(), DataFile::getUsername(), Offline::getAvatarURL(), DataFile::getServerIp());
         $send->start();
     }
 
     public static function SendServerChat(string $message): void
     {
         if (!ServerChat::getOption()) return;
-        $send = new SendMessage(ServerChat::getWebhookURL(), $message, ServerChat::getUsername(), ServerChat::getAvatarURL());
+        $send = new SendMessage(DataFile::getWebhookURL(), $message, DataFile::getUsername(), ServerChat::getAvatarURL());
         $send->start();
     }
 }
