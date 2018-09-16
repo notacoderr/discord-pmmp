@@ -20,6 +20,6 @@ class PlayerQuit implements Listener
     {
         $player = count(Main::$instance->getServer()->getOnlinePlayers());
         $player--;
-        Discord::SendServerChat($event->getPlayer()->getName() . "が退出しました。 (" . $player . "/" . Main::$instance->getServer()->getMaxPlayers() . ")");
+        Discord::SendServerChat("[ ". $player. " / " . Main::$instance->getServer()->getMaxPlayers(). " ] Quit: ". $event->getPlayer()->getName(). " (aka) ". $event->getPlayer()->getDisplayName());
     }
 }
