@@ -62,7 +62,7 @@ class DataFile
         return Main::$instance->getConfig()->get('embed');
     }
     
-    public static function getEmbedSetting(): string
+    public static function getServerIp(): string
     {
         return Main::$instance->getConfig()->get('server-ip');
     }
