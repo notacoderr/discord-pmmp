@@ -12,6 +12,7 @@ namespace InkoHX\php\discordpmmp;
 use InkoHX\php\discordpmmp\Config\Offline;
 use InkoHX\php\discordpmmp\Config\Online;
 use InkoHX\php\discordpmmp\Config\ServerChat;
+use InkoHX\php\discordpmmp\Config\DataFile;
 use InkoHX\php\discordpmmp\Thread\SendEmbed;
 use InkoHX\php\discordpmmp\Thread\SendMessage;
 
