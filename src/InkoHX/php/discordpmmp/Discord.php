@@ -21,14 +21,14 @@ class Discord
     public static function SendOnlineEmbed(): void
     {
         if (!Online::getOption()) return;
-        $send = new SendEmbed(Online::getWebhookURL(), Online::getTitle(), Online::getField(), Online::getValue(), Online::getColor(), Online::getUsername(), Online::getAvatarURL());
+        $send = new SendEmbed(Online::getWebhookURL(), Online::getTitle(), Online::getField(), Online::getValue(), Online::getColor(), Online::getUsername(), Online::getAvatarURL(), DataFile::getServerIp());
         $send->start();
     }
 
     public static function SendOfflineEmbed(): void
     {
         if (!Offline::getOption()) return;
-        $send = new SendEmbed(Offline::getWebhookURL(), Offline::getTitle(), Offline::getField(), Offline::getValue(), Offline::getColor(), Offline::getUsername(), Offline::getAvatarURL());
+        $send = new SendEmbed(Offline::getWebhookURL(), Offline::getTitle(), Offline::getField(), Offline::getValue(), Offline::getColor(), Offline::getUsername(), Offline::getAvatarURL(), DataFile::getServerIp());
         $send->start();
     }
 
